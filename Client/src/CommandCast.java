@@ -4,50 +4,55 @@ import javax.swing.table.DefaultTableModel;
 public class CommandCast {
     public static void CmdReviewMain(String cmd, MainWindow frm){
         switch (cmd) {
-            case "Fetch Employees" -> new Sender("FtchEmp;", frm);
-            case "Fetch Orders" -> new Sender("FtchOrd;", frm);
-            case "Fetch Menu" -> new Sender("FtchMnu;", frm);
+            case "Fetch Employees" -> new Sender("FtchEmp;", frm, null);
+            case "Fetch Orders" -> new Sender("FtchOrd;", frm, null);
+            case "Fetch Menu" -> new Sender("FtchMnu;", frm, null);
             case "Add Row" -> addNewRow(frm);
-            case "Remove" -> removeRow(frm);
+            case "Remove" -> {
+                if (JOptionPane.showConfirmDialog( frm.mainScrollPane,"Are you sure you want to delete this row?","Delete row?",
+                        JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION)
+                    removeRow(frm);
+            }
             case "Log Out" -> {
                 frm.dispose();
                 new LoginWindow();
             }
-            default -> new Sender(cmd + ";Incorrect Input", frm);
+            case "Quit" -> {
+                if (JOptionPane.showConfirmDialog( frm,"Are you sure you want to quit?","Quit?",
+                        JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION)
+                    System.exit(0);
+            }
+            default -> new Sender(cmd + ";Incorrect Input", frm, null);
         }
     }
 
-    public static void CmdReviewLogin(String cmd, String login, String pass, MainWindow frm){
+    public static void CmdReviewLogin(String cmd, String login, String pass, LoginWindow log){
         switch (cmd) {
-            case "Log in" -> new Sender("Auth;" + login + ";" + pass, frm);
-            case "Sign up" -> new Sender("Reg;" + login + ";" + pass, frm);
-            default -> new Sender(cmd + ";Incorrect Input", frm);
+            case "Log in" -> new Sender("Auth;" + login + ";" + pass, null, log);
+            case "Sign up" -> new Sender("Reg;" + login + ";" + pass, null, log);
+            default -> new Sender(cmd + ";Incorrect Input", null, log);
         }
     }
-    public static void SrvWrdReview(String cmd, MainWindow frm){
+    public static void SrvWrdReview(String cmd, MainWindow frm, LoginWindow log){
         String option = cmd.split(";", 2)[0];
         String[] response = cmd.substring(option.length()+1).split(";");
 
         switch (option) {
-            case "waiter" -> {
+            case "waiter", "administrator" -> {
                 LoginWindow.reg.dispose();
                 new MainWindow(option);
-            }
-            case "administrator" -> {
-                LoginWindow.reg.dispose();
-                new MainWindow("admin");
             }
             case "UsrAdd" -> {
                 LoginWindow.reg.dispose();
                 new MainWindow("waiter");
             }
             case "UsrExst" -> {
-                JOptionPane.showMessageDialog(null,
+                JOptionPane.showMessageDialog(log,
                         "User already exists!",
                         "Login Warning", JOptionPane.WARNING_MESSAGE);
                 new MainWindow(response[0]);
             }
-            case "NoUsr" -> JOptionPane.showMessageDialog(null,
+            case "NoUsr" -> JOptionPane.showMessageDialog(log,
                     "No such user exists!",
                     "Login Error", JOptionPane.ERROR_MESSAGE);
             case "OrdInf" -> fillTable(new String[]{"ID", "PRODUCT", "SUPPLIER", "QUANTITY", "DELIVERY DATE"}, response, frm);
@@ -106,7 +111,7 @@ public class CommandCast {
         assert false;
         String request = requestBuilder.toString();
         if (!request.contains("null")){
-            new Sender(request, frm);
+            new Sender(request, frm, null);
         }
     }
 }

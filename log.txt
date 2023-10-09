@@ -1,68 +1,100 @@
-окт. 09, 2023 1:40:21 AM Server main
+окт. 09, 2023 3:40:00 AM Server main
 INFO: SEVER STARTED
-окт. 09, 2023 1:40:48 AM Server main
+окт. 09, 2023 3:45:29 AM Server main
 INFO: CLIENT CONNECTED: 127.0.0.1
-окт. 09, 2023 1:40:48 AM Handler run
+окт. 09, 2023 3:45:29 AM Handler run
 INFO: READER STARTED
-окт. 09, 2023 1:40:48 AM Handler run
+окт. 09, 2023 3:45:29 AM Handler run
 INFO: CLIENT REQUEST ACCEPTED: Auth
-окт. 09, 2023 1:40:49 AM Handler run
-INFO: SERVER RESPONSE TO CLIENT: administrator;
-окт. 09, 2023 1:40:49 AM Handler run
+окт. 09, 2023 3:45:31 AM Handler run
+INFO: SERVER RESPONSE TO CLIENT: waiter;
+окт. 09, 2023 3:45:31 AM Handler run
 INFO: WRITER CLOSED
-окт. 09, 2023 1:40:49 AM Handler run
+окт. 09, 2023 3:45:31 AM Handler run
 INFO: CLIENT SOCKET CLOSED. READER CLOSED
-окт. 09, 2023 1:40:51 AM Server main
+окт. 09, 2023 3:45:35 AM Server main
 INFO: CLIENT CONNECTED: 127.0.0.1
-окт. 09, 2023 1:40:51 AM Handler run
+окт. 09, 2023 3:45:35 AM Handler run
 INFO: READER STARTED
-окт. 09, 2023 1:40:51 AM Handler run
-INFO: CLIENT REQUEST ACCEPTED: FtchOrd
-окт. 09, 2023 1:40:51 AM DBControl fetchOrders
-INFO: ORDERS RETRIEVED
-окт. 09, 2023 1:40:51 AM Handler run
-INFO: SERVER RESPONSE TO CLIENT: OrdInf;101;potato;5ka;45;2023-09-10;102;tomato;Perekryostok;30;2023-10-08;
-окт. 09, 2023 1:40:51 AM Handler run
-INFO: WRITER CLOSED
-окт. 09, 2023 1:40:51 AM Handler run
-INFO: CLIENT SOCKET CLOSED. READER CLOSED
-окт. 09, 2023 1:42:21 AM Server main
-INFO: CLIENT CONNECTED: 127.0.0.1
-окт. 09, 2023 1:42:21 AM Handler run
-INFO: READER STARTED
-окт. 09, 2023 1:42:21 AM Handler run
-INFO: CLIENT REQUEST ACCEPTED: UpdOrd
-окт. 09, 2023 1:42:21 AM Handler run
-INFO: ORDER ADDED AT ROW: 103
-окт. 09, 2023 1:42:21 AM Handler run
-INFO: SERVER RESPONSE TO CLIENT: OrdUpd;
-окт. 09, 2023 1:42:21 AM Handler run
-INFO: WRITER CLOSED
-окт. 09, 2023 1:42:21 AM Handler run
-INFO: CLIENT SOCKET CLOSED. READER CLOSED
-окт. 09, 2023 1:42:43 AM Server main
-INFO: CLIENT CONNECTED: 127.0.0.1
-окт. 09, 2023 1:42:43 AM Handler run
-INFO: READER STARTED
-окт. 09, 2023 1:42:43 AM Handler run
+окт. 09, 2023 3:45:35 AM Handler run
 INFO: CLIENT REQUEST ACCEPTED: FtchMnu
-окт. 09, 2023 1:42:43 AM Handler run
-INFO: SERVER RESPONSE TO CLIENT: MnuInf;1001;pizza;300;499.99;1002;lasagna;350;599.99;1003;raviolli;300;699.99;1004;pasta pesto;380;399.99;1005;salad monstre;350;550.0;
-окт. 09, 2023 1:42:43 AM Handler run
+окт. 09, 2023 3:45:35 AM Handler run
+INFO: SERVER RESPONSE TO CLIENT: MnuInf;1002;lasagna;350;599.99;1003;raviolli;300;699.99;1004;pasta pesto;380;399.99;1005;salad monstre;350;550.0;
+окт. 09, 2023 3:45:35 AM Handler run
 INFO: WRITER CLOSED
-окт. 09, 2023 1:42:43 AM Handler run
+окт. 09, 2023 3:45:35 AM Handler run
 INFO: CLIENT SOCKET CLOSED. READER CLOSED
-окт. 09, 2023 1:42:47 AM Server main
+окт. 09, 2023 3:48:31 AM Server main
 INFO: CLIENT CONNECTED: 127.0.0.1
-окт. 09, 2023 1:42:47 AM Handler run
+окт. 09, 2023 3:48:31 AM Handler run
 INFO: READER STARTED
-окт. 09, 2023 1:42:47 AM Handler run
-INFO: CLIENT REQUEST ACCEPTED: FtchOrd
-окт. 09, 2023 1:42:47 AM DBControl fetchOrders
-INFO: ORDERS RETRIEVED
-окт. 09, 2023 1:42:47 AM Handler run
-INFO: SERVER RESPONSE TO CLIENT: OrdInf;101;potato;5ka;45;2023-09-10;102;tomato;Perekryostok;30;2023-10-08;104;lettuce;7shagov;50;2023-10-10;
-окт. 09, 2023 1:42:47 AM Handler run
+окт. 09, 2023 3:48:31 AM Handler run
+INFO: CLIENT REQUEST ACCEPTED: Auth
+окт. 09, 2023 3:48:31 AM Handler run
+INFO: SERVER RESPONSE TO CLIENT: administrator;
+окт. 09, 2023 3:48:31 AM Handler run
 INFO: WRITER CLOSED
-окт. 09, 2023 1:42:47 AM Handler run
+окт. 09, 2023 3:48:31 AM Handler run
+INFO: CLIENT SOCKET CLOSED. READER CLOSED
+окт. 09, 2023 3:48:33 AM Server main
+INFO: CLIENT CONNECTED: 127.0.0.1
+окт. 09, 2023 3:48:33 AM Handler run
+INFO: READER STARTED
+окт. 09, 2023 3:48:33 AM Handler run
+INFO: CLIENT REQUEST ACCEPTED: FtchEmp
+окт. 09, 2023 3:48:33 AM Handler run
+INFO: SERVER RESPONSE TO CLIENT: EmpInf;1;Yelena;administrator;1234;3;Yuri;waiter;3456;4;Pavel;waiter;0451;5;Viktor;waiter;6969;7;Valeria;administrator;ctvfvbkfirf0310;8;Dimitry;waiter;wreogeawqn;
+окт. 09, 2023 3:48:33 AM Handler run
+INFO: WRITER CLOSED
+окт. 09, 2023 3:48:33 AM Handler run
+INFO: CLIENT SOCKET CLOSED. READER CLOSED
+окт. 09, 2023 3:50:42 AM Server main
+INFO: CLIENT CONNECTED: 127.0.0.1
+окт. 09, 2023 3:50:42 AM Handler run
+INFO: READER STARTED
+окт. 09, 2023 3:50:42 AM Handler run
+INFO: CLIENT REQUEST ACCEPTED: Auth
+окт. 09, 2023 3:50:42 AM Handler run
+INFO: SERVER RESPONSE TO CLIENT: administrator;
+окт. 09, 2023 3:50:42 AM Handler run
+INFO: WRITER CLOSED
+окт. 09, 2023 3:50:42 AM Handler run
+INFO: CLIENT SOCKET CLOSED. READER CLOSED
+окт. 09, 2023 3:50:43 AM Server main
+INFO: CLIENT CONNECTED: 127.0.0.1
+окт. 09, 2023 3:50:43 AM Handler run
+INFO: READER STARTED
+окт. 09, 2023 3:50:43 AM Handler run
+INFO: CLIENT REQUEST ACCEPTED: FtchOrd
+окт. 09, 2023 3:50:43 AM DBControl fetchOrders
+INFO: ORDERS RETRIEVED
+окт. 09, 2023 3:50:43 AM Handler run
+INFO: SERVER RESPONSE TO CLIENT: OrdInf;101;potato;5ka;45;2023-09-10;102;tomato;Perekryostok;30;2023-10-08;104;lettuce;7shagov;50;2023-10-10;
+окт. 09, 2023 3:50:43 AM Handler run
+INFO: WRITER CLOSED
+окт. 09, 2023 3:50:43 AM Handler run
+INFO: CLIENT SOCKET CLOSED. READER CLOSED
+окт. 09, 2023 4:05:19 AM Server main
+INFO: CLIENT CONNECTED: 127.0.0.1
+окт. 09, 2023 4:05:19 AM Handler run
+INFO: READER STARTED
+окт. 09, 2023 4:05:19 AM Handler run
+INFO: CLIENT REQUEST ACCEPTED: Auth
+окт. 09, 2023 4:05:19 AM Handler run
+INFO: SERVER RESPONSE TO CLIENT: NoUsr;
+окт. 09, 2023 4:05:19 AM Handler run
+INFO: WRITER CLOSED
+окт. 09, 2023 4:05:19 AM Handler run
+INFO: CLIENT SOCKET CLOSED. READER CLOSED
+окт. 09, 2023 4:08:22 AM Server main
+INFO: CLIENT CONNECTED: 127.0.0.1
+окт. 09, 2023 4:08:22 AM Handler run
+INFO: READER STARTED
+окт. 09, 2023 4:08:22 AM Handler run
+INFO: CLIENT REQUEST ACCEPTED: Auth
+окт. 09, 2023 4:08:22 AM Handler run
+INFO: SERVER RESPONSE TO CLIENT: administrator;
+окт. 09, 2023 4:08:22 AM Handler run
+INFO: WRITER CLOSED
+окт. 09, 2023 4:08:22 AM Handler run
 INFO: CLIENT SOCKET CLOSED. READER CLOSED

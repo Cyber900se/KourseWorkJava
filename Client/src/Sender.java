@@ -6,7 +6,7 @@ public class Sender {
     private static BufferedReader in;
     private static BufferedWriter out;
 
-    Sender(String msg, MainWindow frm){
+    Sender(String msg, MainWindow frm, LoginWindow log){
         String serverWord;
         try {
             try {
@@ -20,9 +20,7 @@ public class Sender {
                 out.write(msg + "\n");
                 out.flush();
                 serverWord = in.readLine();
-                System.out.println(serverWord);
-                CommandCast.SrvWrdReview(serverWord, frm);
-
+                CommandCast.SrvWrdReview(serverWord, frm, log);
             } finally {
                 clientSocket.close();
                 in.close();

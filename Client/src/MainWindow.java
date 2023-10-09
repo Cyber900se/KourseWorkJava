@@ -14,6 +14,7 @@ public class MainWindow extends JFrame implements ActionListener {
     JButton logOut = new JButton("Log Out");
     JButton addRow = new JButton("Add Row");
     JButton removeRow = new JButton("Remove");
+    JButton quit = new JButton("Quit");
     ImageIcon icon = new ImageIcon(Objects.requireNonNull(LoginWindow.class.getResource("img/menuicon.png")));
     JScrollPane mainScrollPane = new JScrollPane();
     JTable mainTable = new JTable();
@@ -32,7 +33,7 @@ public class MainWindow extends JFrame implements ActionListener {
         this.add(Button(seeOrders, 35, 35, 200));
         this.add(Button(seeMenu, 35, 95, 200));
 
-        if (Objects.equals(modeCheck, "admin")){
+        if (Objects.equals(modeCheck, "administrator")){
             this.add(Button(seeUsers, 35, 155, 200));
             this.add(Button(addRow, 274,650, 120));
             this.add(Button(removeRow, 400,650, 120));
@@ -41,12 +42,14 @@ public class MainWindow extends JFrame implements ActionListener {
             addRow.addActionListener(this);
         }
         this.add(Button(logOut, 824, 650, 150));
+        this.add(Button(quit, 60, 650, 150));
         this.add(scrollPane(mainScrollPane, 274,35,700,600));
 
         seeOrders.addActionListener(this);
         seeMenu.addActionListener(this);
 
         logOut.addActionListener(this);
+        quit.addActionListener(this);
     }
 
     JButton Button(JButton b, int x, int y, int w){
@@ -66,7 +69,7 @@ public class MainWindow extends JFrame implements ActionListener {
     public JTable infoTable(String[][] info, String[] columnNames){
 
         DefaultTableModel model = new DefaultTableModel(info, columnNames);
-        if(Objects.equals(this.modeCheck, "admin")){
+        if(Objects.equals(this.modeCheck, "administrator")){
             this.mainTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             model.addTableModelListener(e -> {
                 if (e.getType() == TableModelEvent.UPDATE){

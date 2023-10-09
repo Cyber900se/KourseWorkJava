@@ -75,11 +75,10 @@ public class LoginWindow extends Component implements ActionListener {
         String ps = String.valueOf(pass.getPassword());
         name.setText("");
         pass.setText("");
-        System.out.println(nm + " " + ps);
         if ((nm.matches("\\w+")) && (ps.matches("\\w+"))) {
-            CommandCast.CmdReviewLogin(cmd, nm, ps, null);
+            CommandCast.CmdReviewLogin(cmd, nm, ps, this);
         } else {
-            JOptionPane.showMessageDialog(null,
+            JOptionPane.showMessageDialog(this,
                     "Input must only contain letters and numbers!",
                     "Input Error", JOptionPane.ERROR_MESSAGE);
         }
